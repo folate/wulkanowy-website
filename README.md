@@ -1,4 +1,4 @@
-# wulkanowy-web
+# wulkanowy-website
 Website created specially for wulkanowy/wulkanowy
 
 
