@@ -1,3 +1,5 @@
+// navbar shit..
+
 // select html element by class
 var element = document.querySelector('header');
 
