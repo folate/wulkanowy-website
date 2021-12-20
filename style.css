@@ -698,6 +698,7 @@ header .scroll-down a svg path {
 
 .cont .c1 .cont-clip .functions {
   width: 100%;
+  padding: 10vh;
 }
 
 .cont .c1 .cont-clip .functions .row {
@@ -1294,6 +1295,7 @@ header .scroll-down a svg path {
   transition: color .2s ease, background .2s ease, border .2s ease;
   -webkit-box-shadow: 0px 0px 44px -15px #d32f2f;
           box-shadow: 0px 0px 44px -15px #d32f2f;
+  cursor: pointer;
 }
 
 .cont .c3 .cont-clip .cont-center form .submit-1:hover {
@@ -1430,18 +1432,22 @@ footer .footer__copyrights--cont--left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 footer .footer__copyrights--cont--left .copyright {
   color: #525252;
 }
 
+footer .footer__copyrights--cont--left .copyright .spacer {
+  margin: 0 15px;
+}
+
 footer .footer__copyrights--cont--left .privacy-policy a {
-  color: #919191;
+  color: #6d6d6d;
   text-decoration: none;
   text-transform: uppercase;
 }

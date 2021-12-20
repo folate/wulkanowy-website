@@ -12,4 +12,4 @@ Won't work on mobile devices or small screen devices.
 - FAQ Section
 - Resposiveness (80% done)
 - Move to vue
-- Beautify code so it's more realdable and understandable for future commiters 
+- Beautify code so it's more readable and understandable for future commiters 

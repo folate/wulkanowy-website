@@ -400,6 +400,7 @@ header {
             }
             .functions {
                 width: 100%;
+                padding: 10vh;
                 .row {
                     width: 100%;
                     display: flex;
@@ -808,6 +809,7 @@ header {
                         border: none;
                         transition: color .2s ease, background .2s ease, border .2s ease;
                         box-shadow: 0px 0px 44px -15px rgb(211, 47, 47);
+                        cursor: pointer;
                         &:hover {
                             background: rgb(201, 201, 201);
                             color: black;
@@ -893,13 +895,16 @@ footer {
                 }
                 &--left {
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     .copyright {
                         color: #525252;
+                        .spacer {
+                            margin: 0 15px;
+                        }
                     }
                     .privacy-policy {
                         a {
-                            color: rgb(145, 145, 145);
+                            color: #6d6d6d;
                             text-decoration: none;
                             text-transform: uppercase;
                         }
