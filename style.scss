@@ -842,9 +842,10 @@ footer {
                 justify-content: space-around;
                 flex-wrap: wrap;
                 @media screen and (max-width: 430px) {
-                    justify-content: center;
+                    width: min-content;
+                    justify-content: flex-start;
                     padding-top: 10vh;
-                    width: 80%;
+                    max-width: 80%;
                     margin: 0 auto;
                 }
                 a {
@@ -861,6 +862,9 @@ footer {
                     }
                     @media screen and (max-width: 430px) {
                         margin-bottom: 40px;
+                        &:nth-last-of-type(1){
+                            margin-bottom: 0;
+                        }
                     }
                 }
                 .icon {
@@ -896,10 +900,17 @@ footer {
                 &--left {
                     display: flex;
                     flex-direction: row;
+                    @media screen and (max-width: 430px) {
+                        flex-direction: column;
+                    }
                     .copyright {
                         color: #525252;
                         .spacer {
                             margin: 0 15px;
+                            display: block;
+                            @media screen and (max-width: 430px) {
+                                display: none;
+                            }
                         }
                     }
                     .privacy-policy {
@@ -920,6 +931,12 @@ footer {
                         color: #525252;
                         font-weight: 600;
                         text-align: right;
+                    }
+                    .empty {
+                        display: none;
+                        @media screen and (max-width: 430px) {
+                            display: none;
+                        }
                     }
                 }
             }
