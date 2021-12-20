@@ -265,9 +265,23 @@ header {
     width: 100%;
     transform: translateY(-6px);
 }
-.wave3 {
+.wave-3 {
     width: 100%;
-    transform: translateY(-6px);
+    background: rgb(8, 8, 8);
+    svg {
+        transform: translateY(6px);
+        fill: #161616;
+    }
+}
+.wave-4 {
+    width: 100%;
+    background: rgb(8, 8, 8);
+    position: absolute;
+    bottom: 0;
+    svg {
+        transform: translateY(-6px);
+        fill: #161616;
+    }
 }
 .cont {
     .cont-clip {
@@ -490,7 +504,9 @@ header {
         }
     }
     .c2 {
-        min-height: 100vh;
+        padding-top: 20vh;
+        min-height: 90vh;
+        width: 100%;
         background-color: rgb(8, 8, 8);
         .cont-clip {
             padding: 10vh 0;
@@ -507,34 +523,234 @@ header {
                 }
             }
             .downloads {
+                position: relative;
                 display: flex;
+                width: 100%;
                 flex-direction: row;
-                >a {
-                    img {
+                padding: 10vh 10vh;
+                justify-content: space-around;
+                align-items: center;
+                .download-links {
+                    display: flex;
+                    flex-direction: column;
+                    a {
+                        margin: 15px 0;
+                        img {
+                            width: 300px;
+                        }
+                    }
+                    .github {
+                        background: black;
+                        border: 1px solid white;
+                        border-radius: 10px;
+                        height: max-content;
+                        padding: 10px 15px;
+                        padding-right: 0;
+                        color: white;
+                        font-family: 'Poppins', sans-serif;
                         width: 300px;
+                        height: 90px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        font-size: 20px;
+                        .texts {
+                            display: flex;
+                            flex-direction: column;
+                            .title {
+                                font-weight: 600;
+                                font-size: 23px;
+                            }
+                            .release-download {
+                                font-size: 14px;
+                            }
+                        }
+                        svg {
+                            margin-right: 30px;
+                            height: 80%;
+                            path {
+                                fill: white;
+                            }
+                        }
                     }
                 }
-                .github {
-                    background: black;
-                    border: 1px solid white;
-                    border-radius: 10px;
-                    height: max-content;
-                    padding: 10px;
+                .phone-mock {
+                    img {
+                        position: relative;
+                        width: 500px;
+                        pointer-events: none;
+                        z-index: 1;
+
+                    }
+                }
+            }
+        }
+    }
+    .c3 {
+        position: relative;
+        min-height: 90vh;
+        width: 100%;
+        background-color: #161616;
+        .cont-clip {
+            padding: 10vh 0;
+            .title {
+                width: 100%;
+                h1 {
+                    width: max-content;
+                    font-weight: 600;
+                    margin-top: 20px;
+                    font-size: 35px;
+                    color: rgb(218, 218, 218);
+                    font-family: 'Poppins', sans-serif;
+                    border-bottom: 4px solid #d32f2f;
+                }
+            }
+            .cont-center {
+                width: 50%;
+                margin: 0 auto;
+                padding: 10vh 0;
+                padding-bottom: 20vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                form {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     color: white;
                     font-family: 'Poppins', sans-serif;
-                    width: 300px;
-                    >a {
-                        text-decoration: none;
-                        color: white;
+                    .label {
+                        margin: 10px 0;
+                        margin-left: 10px;
+                        font-size: 18px;
                     }
-                    svg {
-                        path {
-                            fill: white;
+                    .input-1 {
+                        margin-bottom: 15px;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 14px;
+                        padding: 10px;
+                        border: 1px solid rgb(201, 201, 201);
+                        border-radius: 10px;
+                        background: transparent;
+                        color: rgb(201, 201, 201);
+                    }
+                    .textarea-1 {
+                        border: 1px solid rgb(201, 201, 201);
+                        color: rgb(201, 201, 201);
+                        background: transparent;
+                        margin-bottom: 30px;
+                        border-radius: 10px;
+                        padding: 10px;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 14px;
+                    }
+                    .submit-1 {
+                        border-radius: 10px;
+                        padding: 12px 20px;
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 16px;
+                        font-weight: 300;
+                        background: rgb(211, 47, 47);;
+                        color: #ffffff;
+                        border: none;
+                        transition: color .2s ease, background .2s ease, border .2s ease;
+                        box-shadow: 0px 0px 44px -15px rgb(211, 47, 47);
+                        &:hover {
+                            background: rgb(201, 201, 201);
+                            color: black;
+                        }
+                        &:active {
+                            color: #d32f2f;;
+                            background: rgb(255, 255, 255);
                         }
                     }
                 }
             }
         }
+    }
+}
+footer {
+    background: #080808;
+    padding: 5vh 10%;
+    padding-bottom: 3vh;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    .footer {
+        &__links {
+            &--cont {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    height: max-content;
+                    color: #919191;
+                    transition: color .2s ease;
+                    &:hover .icon, &:hover {
+                        color: white;
+                        fill: white;
+                    }
+                }
+                .icon {
+                    width: 50px;
+                    fill: rgb(145, 145, 145);
+                    margin-right: 10px;
+                    transition: color .2s ease, fill .2s ease;
+                }
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    .title {
+                        font-weight: 600;
+                        font-size: 20px;
+                    }
+                    .link {
+                        font-weight: 400;
+                        letter-spacing: 1px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        &__copyrights{
+            &--cont {
+                margin-top: 10vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                &--left {
+                    display: flex;
+                    flex-direction: column;
+                    .copyright {
+                        color: #525252;
+                    }
+                    .privacy-policy {
+                        a {
+                            color: rgb(145, 145, 145);
+                            text-decoration: none;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                &--right {
+                    display: flex;
+                    flex-direction: column;
+                    color: #525252;
+                    a {
+                        text-decoration: none;
+                        color: #525252;
+                        font-weight: 600;
+                        text-align: right;
+                    }
+                }
+            }
+        } 
     }
 }
 .button, button {
