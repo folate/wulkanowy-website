@@ -1459,7 +1459,7 @@ footer .footer__copyrights--cont--left .copyright {
 
 footer .footer__copyrights--cont--left .copyright .spacer {
   margin: 0 15px;
-  display: block;
+  display: inline;
 }
 
 @media screen and (max-width: 430px) {
@@ -1499,7 +1499,7 @@ footer .footer__copyrights--cont--right .empty {
 
 @media screen and (max-width: 430px) {
   footer .footer__copyrights--cont--right .empty {
-    display: none;
+    display: inline;
   }
 }
 

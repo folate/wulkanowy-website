@@ -907,7 +907,7 @@ footer {
                         color: #525252;
                         .spacer {
                             margin: 0 15px;
-                            display: block;
+                            display: inline;
                             @media screen and (max-width: 430px) {
                                 display: none;
                             }
@@ -935,7 +935,7 @@ footer {
                     .empty {
                         display: none;
                         @media screen and (max-width: 430px) {
-                            display: none;
+                            display: inline;
                         }
                     }
                 }
