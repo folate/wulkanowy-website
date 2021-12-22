@@ -49,7 +49,7 @@ function GetLatestReleaseInfo() {
     //  timeAgo = (dateDiff / oneDay).toFixed(0) + " dni temu";
     //}
     var releaseInfo = timeAgo;
-    $(".gh").attr("href", asset.browser_download_url);
+    $(".github-apk").attr("href", asset.browser_download_url);
     $(".ver").text(release.tag_name);
     //$(".release-time").text(releaseInfo);
     $(".dl-link").attr("href", release.html_url);
