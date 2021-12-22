@@ -118,9 +118,6 @@ header {
         top: 0;
         right: 0;
         z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         @media screen and (max-width: 1380px) {
             background-size: 500px 600px;
             background-position: 40% 40%;
@@ -823,6 +820,103 @@ header {
             }
         }
     }
+    .c4 {
+        position: relative;
+        min-height: 70vh;
+        width: 100%;
+        background-color: #080808;
+        padding: 10vh 0;
+        @media screen and (max-width: 430px) {
+            padding-bottom: 5vh;
+        }
+        .cont-clip {
+            .title {
+                width: 100%;
+                h1 {
+                    width: fit-content;
+                    font-weight: 600;
+                    margin-top: 20px;
+                    font-size: 35px;
+                    color: rgb(218, 218, 218);
+                    font-family: 'Poppins', sans-serif;
+                    border-bottom: 4px solid #d32f2f;
+                    word-wrap: break-word;
+                }
+            }
+            .faq {
+                &-cont {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 15vh 15%;
+                    padding-bottom: 5vh;
+                    color: rgb(155, 155, 155);
+                    font-family: 'Poppins', sans-serif;
+                    @media screen and (max-width: 430px) {
+                        padding: 15vh 0;
+                        padding-bottom: 0;
+                    }
+                }
+                &-card {
+                    width: 100%;
+                    border: 1px rgb(51, 51, 51) solid;
+                    border-radius: 15px;
+                    padding: 3vh 2vw;
+                    height: min-content;
+                    transition: all .2s ease;
+                    margin-bottom: 40px;
+                    background: #080808;
+                    &:hover .faq-card-header, &:hover .faq-card-header-more{
+                        color: white;
+                        fill: white;
+                    }
+                    @media screen and (max-width: 430px) {
+                        padding: 3vh 5vw;
+                    }
+                    &:nth-last-of-type(1) {
+                        margin-bottom: 0;
+                    }
+                    &-header {
+                        font-size: 18px;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        transition: color .2s ease;
+                        @media screen and (max-width: 430px) {
+                            font-size: 16px;
+                        }
+                        &-title {
+                            font-weight: 600;
+                        }
+                        &-more {
+                            fill: rgb(155, 155, 155);
+                            transform: rotate(-90deg);
+                            transition: transform .2s ease, fill .2s ease;;
+                            > svg {
+                                height: 0.8em;
+                            }
+                        }
+                    }
+                    &-body {
+                        transition: all 0.2s ease;
+                        max-height: 0;
+                        overflow: hidden;
+                        p {
+                            padding: 3vh 0 2vh 0;
+                        }
+                    }
+                    .active {
+                        color: white;
+                        .faq-card-header-more {
+                            transform: rotate(90deg);
+                            fill: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 footer {
     background: #080808;
@@ -941,6 +1035,38 @@ footer {
                 }
             }
         } 
+    }
+}
+.faq-dec {
+    background: #161616 !important;
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('wulkanowy_faq.svg');
+        background-size: 25%;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 20%;
+        z-index: -1;
+        opacity: 0;
+        animation: fadein .1s ease forwards;
+        @media screen and (max-width: 430px) {
+            background-position-x: -100%;
+            background-size: 100%;
+        }
+        @keyframes fadein {
+            0% {
+                opacity: 0;
+            } 100% {
+                opacity: .05;
+            }
+        }
     }
 }
 .button, button {
