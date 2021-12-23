@@ -830,6 +830,12 @@ header {
             padding-bottom: 5vh;
         }
         .cont-clip {
+            table, td, th {
+                text-align: center;
+                border-collapse: collapse;
+                border: 2px solid #282828;
+              }
+              
             .title {
                 width: 100%;
                 h1 {

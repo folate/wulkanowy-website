@@ -96,12 +96,6 @@ nav .nav-items ul li a:hover {
   border-bottom: 2px solid #d32f2f;
 }
 
-table, td, th {
-  text-align: center;
-  border-collapse: collapse;
-  border: 2px solid #282828;
-}
-
 nav .nav-items ul li:nth-last-of-type(1) {
   /* remove margin on the last element of nav */
 }
@@ -1317,6 +1311,12 @@ header .scroll-down a svg path {
   .cont .c4 {
     padding-bottom: 5vh;
   }
+}
+
+.cont .c4 .cont-clip table, .cont .c4 .cont-clip td, .cont .c4 .cont-clip th {
+  text-align: center;
+  border-collapse: collapse;
+  border: 2px solid #282828;
 }
 
 .cont .c4 .cont-clip .title {
