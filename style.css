@@ -96,8 +96,10 @@ nav .nav-items ul li a:hover {
   border-bottom: 2px solid #d32f2f;
 }
 
-td {
+table, td, th {
   text-align: center;
+  border-collapse: collapse;
+  border: 2px solid #282828;
 }
 
 nav .nav-items ul li:nth-last-of-type(1) {
