@@ -96,6 +96,10 @@ nav .nav-items ul li a:hover {
   border-bottom: 2px solid #d32f2f;
 }
 
+td {
+  text-align: center;
+}
+
 nav .nav-items ul li:nth-last-of-type(1) {
   /* remove margin on the last element of nav */
 }
