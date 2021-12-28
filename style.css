@@ -1356,7 +1356,7 @@ header .scroll-down a svg path {
 
 .cont .c4 .cont-clip .faq-card {
   width: 100%;
-  border: 1px #333333 solid;
+  border: 1px #161616 solid;
   border-radius: 15px;
   padding: 3vh 2vw;
   height: -webkit-min-content;
@@ -1395,6 +1395,9 @@ header .scroll-down a svg path {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
   -webkit-transition: color .2s ease;
   transition: color .2s ease;
@@ -1408,12 +1411,11 @@ header .scroll-down a svg path {
 
 .cont .c4 .cont-clip .faq-card-header-title {
   font-weight: 600;
+  max-width: 80%;
 }
 
 .cont .c4 .cont-clip .faq-card-header-more {
   fill: #9b9b9b;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
   -webkit-transition: fill .2s ease, -webkit-transform .2s ease;
   transition: fill .2s ease, -webkit-transform .2s ease;
   transition: transform .2s ease, fill .2s ease;
@@ -1422,6 +1424,12 @@ header .scroll-down a svg path {
 
 .cont .c4 .cont-clip .faq-card-header-more > svg {
   height: 0.8em;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
 .cont .c4 .cont-clip .faq-card-body {
@@ -1432,7 +1440,40 @@ header .scroll-down a svg path {
 }
 
 .cont .c4 .cont-clip .faq-card-body p {
+  font-size: 16px;
   padding: 3vh 0 2vh 0;
+}
+
+.cont .c4 .cont-clip .faq-card-body p .faq-contact-href {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: inherit;
+}
+
+.cont .c4 .cont-clip .faq-card-body p.faq-p-bigger {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.cont .c4 .cont-clip .faq-card-body p > a {
+  color: inherit;
+  font-weight: 600;
+}
+
+.cont .c4 .cont-clip .faq-card-body ul.faq-diaries-list {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.cont .c4 .cont-clip .faq-card-body ul.faq-diaries-list li {
+  margin: 20px 0;
+}
+
+.cont .c4 .cont-clip .faq-card-body ul.faq-diaries-list li a {
+  display: block;
+  color: #e2e2e2;
+  word-break: break-all;
 }
 
 .cont .c4 .cont-clip .faq-card .active {
@@ -1440,9 +1481,12 @@ header .scroll-down a svg path {
 }
 
 .cont .c4 .cont-clip .faq-card .active .faq-card-header-more {
+  fill: white;
+}
+
+.cont .c4 .cont-clip .faq-card .active .faq-card-header-more svg {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  fill: white;
 }
 
 footer {
@@ -1654,10 +1698,10 @@ footer .footer__copyrights--cont--right .empty {
   width: 100%;
   height: 100%;
   background: url("wulkanowy_faq.svg");
-  background-size: 25%;
+  background-size: cover !important;
   background-repeat: no-repeat;
   background-position-y: center;
-  background-position-x: 20%;
+  background-position-x: top;
   z-index: -1;
   opacity: 0;
   -webkit-animation: fadein .1s ease forwards;
@@ -1676,7 +1720,7 @@ footer .footer__copyrights--cont--right .empty {
     opacity: 0;
   }
   100% {
-    opacity: .05;
+    opacity: .02;
   }
 }
 
@@ -1685,7 +1729,7 @@ footer .footer__copyrights--cont--right .empty {
     opacity: 0;
   }
   100% {
-    opacity: .05;
+    opacity: .02;
   }
 }
 
