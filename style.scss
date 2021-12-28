@@ -830,12 +830,6 @@ header {
             padding-bottom: 5vh;
         }
         .cont-clip {
-            table, td, th {
-                text-align: center;
-                border-collapse: collapse;
-                border: 2px solid #282828;
-              }
-              
             .title {
                 width: 100%;
                 h1 {
@@ -865,7 +859,7 @@ header {
                 }
                 &-card {
                     width: 100%;
-                    border: 1px rgb(51, 51, 51) solid;
+                    border: 1px #161616 solid;
                     border-radius: 15px;
                     padding: 3vh 2vw;
                     height: min-content;
@@ -887,6 +881,7 @@ header {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
+                        align-items: center;
                         cursor: pointer;
                         transition: color .2s ease;
                         @media screen and (max-width: 430px) {
@@ -894,13 +889,15 @@ header {
                         }
                         &-title {
                             font-weight: 600;
+                            max-width: 80%;
                         }
                         &-more {
                             fill: rgb(155, 155, 155);
-                            transform: rotate(-90deg);
-                            transition: transform .2s ease, fill .2s ease;;
+                            transition: transform .2s ease, fill .2s ease;
                             > svg {
                                 height: 0.8em;
+                                transform: rotate(-90deg);
+                                transition: transform .2s ease;
                             }
                         }
                     }
@@ -909,13 +906,42 @@ header {
                         max-height: 0;
                         overflow: hidden;
                         p {
+                            font-size: 16px;
                             padding: 3vh 0 2vh 0;
+                            .faq-contact-href {
+                                color: inherit;
+                                text-decoration: underline;
+                                font-weight: inherit;
+                            }
+                            &.faq-p-bigger {
+                                font-size: 18px;
+                                font-weight: 700;
+                                margin-top: 20px;
+                            }
+                            >a {
+                                color: inherit;
+                                font-weight: 600;
+                            }
+                        }
+                        ul.faq-diaries-list {
+                            list-style-position: inside;
+                            list-style-type: disc;
+                            li {
+                                margin: 20px 0;
+                                a {
+                                    display: block;
+                                    color: rgb(226, 226, 226);
+                                    word-break: break-all;
+                                }
+                            }
                         }
                     }
                     .active {
                         color: white;
                         .faq-card-header-more {
-                            transform: rotate(90deg);
+                            svg {
+                                transform: rotate(90deg);
+                            }
                             fill: white;
                         }
                     }
@@ -1055,10 +1081,10 @@ footer {
         width: 100%;
         height: 100%;
         background: url('wulkanowy_faq.svg');
-        background-size: 25%;
+        background-size: cover !important;
         background-repeat: no-repeat;
         background-position-y: center;
-        background-position-x: 20%;
+        background-position-x: top;
         z-index: -1;
         opacity: 0;
         animation: fadein .1s ease forwards;
@@ -1070,7 +1096,7 @@ footer {
             0% {
                 opacity: 0;
             } 100% {
-                opacity: .05;
+                opacity: .02;
             }
         }
     }
