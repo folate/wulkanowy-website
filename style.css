@@ -1461,6 +1461,14 @@ header .scroll-down a svg path {
   font-weight: 600;
 }
 
+.cont .c4 .cont-clip .faq-card-body p > img {
+  width: 100%;
+}
+
+.cont .c4 .cont-clip .faq-card-body > img {
+  width: 100%;
+}
+
 .cont .c4 .cont-clip .faq-card-body ul.faq-diaries-list {
   list-style-position: inside;
   list-style-type: disc;
