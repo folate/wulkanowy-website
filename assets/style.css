@@ -1182,8 +1182,11 @@ header .scroll-down a svg path {
   }
 }
 
-.c4 .title {
-  width: 100%;
+.c4 .title h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  word-wrap: break-word;
 }
 
 .faq-cont {

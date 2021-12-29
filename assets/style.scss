@@ -2,9 +2,7 @@ $navbar-dark-texts: #ffffff;
 $accent-color: #d32f2f;
 $navbar-dark-bg: rgba(22, 22, 22, 1);
 $navbar-dark-border-botm: rgba(177, 177, 177, 0.2);
-
 $text-sel: #d32f2f;
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -116,7 +114,6 @@ html {
         }
     }
 } 
-
 header {
     background-image: url('/assets/bg.jpg');
     background-size: cover;
@@ -730,7 +727,10 @@ header {
         padding-bottom: 5vh;
     }
     .title {
-        width: 100%;
+        h1 {
+            width: fit-content;
+            word-wrap: break-word;
+        }
     }
 }
 .faq {
