@@ -177,14 +177,14 @@ html {
 }
 
 header {
-  background-image: url("assets/bg.jpg");
+  background-image: url("bg.jpg");
   background-size: cover;
   background-position: center;
 }
 
 header::after {
   content: " ";
-  background: url("assets/blob-haikeia.svg");
+  background: url("blob-haikeia.svg");
   background-repeat: no-repeat;
   background-position: 60% 40%;
   background-size: 700px 600px;
@@ -1560,7 +1560,7 @@ footer .footer__copyrights--cont--right .empty {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("assets/wulkanowy_faq.svg");
+  background: url("wulkanowy_faq.svg");
   background-size: cover !important;
   background-repeat: no-repeat;
   background-position-y: center;
