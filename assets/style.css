@@ -1,3 +1,57 @@
+.dark {
+  --navbar-texts: #ffffff;
+  --navbar-bg: rgba(22, 22, 22, 1);
+  --navbar-border-botm: rgba(177, 177, 177, 0.2);
+  --navbar-logo: #ffffff;
+  --section-title: rgb(218, 218, 218);
+  --item-text: rgb(218, 218, 218);
+  --item-desc: rgb(153, 153, 153);
+  --form-text: #ffffff;
+  --form-textareas: rgb(201, 201, 201);
+  --faq-color: rgb(155, 155, 155);
+  --faq-color-hover: #ffffff;
+  --faq-list: rgb(226, 226, 226);
+  --footer-texts: rgb(145, 145, 145);
+  --footer-texts-hover: #ffffff;
+  --footer-copyrights-author: #525252;
+  --footer-privacy: #6d6d6d;
+  --texts-buttons: #ffffff;
+  --header-wave-last: #161616;
+  --cont-1-bg: #161616;
+  --cont-2-bg: #080808;
+  --cont-3-bg: #161616;
+  --faq-item-bg: #080808;
+  --faq-dec-bg: #161616;
+  --submit-button-text: #000000;
+}
+
+.white {
+  --navbar-texts: #000000;
+  --navbar-bg: rgb(235, 235, 235);
+  --navbar-border-botm: rgba(77, 77, 77, 0.2);
+  --navbar-logo: #000000;
+  --section-title: rgb(37, 37, 37);
+  --item-text: rgb(37, 37, 37);
+  --item-desc: rgb(105, 105, 105);
+  --form-text: #000000;
+  --form-textareas: rgb(54, 54, 54);
+  --faq-color: rgb(71, 71, 71);
+  --faq-color-hover: #000000;
+  --faq-list: rgb(20, 20, 20);
+  --footer-texts: rgb(105, 105, 105);
+  --footer-texts-hover: #000000;
+  --footer-copyrights-author: #b9b9b9;
+  --footer-privacy: #9e9e9e;
+  --texts-buttons: #000000;
+  --header-wave-last: #ffffff;
+  --cont-1-bg: #ffffff;
+  --cont-2-bg: #e6e6e6;
+  --cont-3-bg: #ffffff;
+  --faq-item-bg: #f1f1f1;
+  --faq-dec-bg: #ffffff;
+  --submit-button-text: #ffffff;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -6,12 +60,12 @@
 }
 
 ::-moz-selection {
-  color: #ffffff;
+  color: white;
   background: #d32f2f;
 }
 
 ::selection {
-  color: #ffffff;
+  color: white;
   background: #d32f2f;
 }
 
@@ -31,10 +85,30 @@ html {
 }
 
 .navbar.scrolled {
-  background-color: #161616;
-  border-bottom: 1px solid rgba(177, 177, 177, 0.2);
-  color: #ffffff;
-  fill: #ffffff;
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--navbar-border-botm);
+  color: var(--navbar-texts);
+  fill: var(--navbar-texts);
+}
+
+.navbar.scrolled .burger {
+  color: var(--navbar-texts);
+}
+
+.navbar.scrolled nav a svg path {
+  --navbar-logo: var(--navbar-logo-a);
+}
+
+.navbar.scrolled nav a span {
+  color: var(--navbar-texts);
+}
+
+.navbar.scrolled nav ul li a {
+  color: var(--navbar-texts);
+}
+
+.navbar.scrolled nav ul li a.active {
+  border-bottom: 2px solid var(--navbar-texts);
 }
 
 .navbar nav {
@@ -102,7 +176,7 @@ html {
 }
 
 .navbar nav ul li a.active {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid white;
 }
 
 .navbar nav ul li a.active:hover {
@@ -120,7 +194,7 @@ html {
 
 .navbar nav .burger {
   display: none;
-  color: #ffffff;
+  color: white;
   cursor: pointer;
 }
 
@@ -158,6 +232,10 @@ html {
   margin-right: 15px;
 }
 
+.navbar nav a svg path {
+  --navbar-logo: white;
+}
+
 @media screen and (max-width: 430px) {
   .navbar nav a svg {
     height: 25px;
@@ -167,7 +245,7 @@ html {
 .navbar nav a span {
   font-size: 16px;
   font-weight: 300;
-  color: #ffffff;
+  color: white;
 }
 
 @media screen and (max-width: 430px) {
@@ -297,7 +375,7 @@ header .hero-cont .left .title h1 {
 header .hero-cont .left .title svg {
   margin-right: 10px;
   height: 45px;
-  fill: #ffffff;
+  fill: var(--navbar-texts);
 }
 
 header .hero-cont .left p {
@@ -357,6 +435,7 @@ header .hero-cont .left .buttons a:nth-of-type(2) {
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
   background-color: #d32f2f;
+  color: #ffffff;
   -webkit-box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.733);
           box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.733);
 }
@@ -632,7 +711,7 @@ header .scroll-down a svg path {
   font-weight: 600;
   margin-top: 20px;
   font-size: 35px;
-  color: #dadada;
+  color: var(--section-title);
   font-family: 'Poppins', sans-serif;
   border-bottom: 4px solid #d32f2f;
 }
@@ -656,7 +735,7 @@ header .scroll-down a svg path {
 
 .wave {
   width: 100%;
-  background: #080808;
+  background: var(--cont-2-bg);
 }
 
 .wave.three svg {
@@ -675,7 +754,7 @@ header .scroll-down a svg path {
 }
 
 .wave svg {
-  fill: #161616;
+  fill: var(--cont-3-bg);
 }
 
 .cont-clip {
@@ -688,7 +767,7 @@ header .scroll-down a svg path {
   padding: 10vh 0;
   padding-bottom: 0;
   min-height: 150vh;
-  background-color: #161616;
+  background-color: var(--cont-1-bg);
   position: relative;
 }
 
@@ -812,7 +891,7 @@ header .scroll-down a svg path {
 .item {
   width: 87.5%;
   margin: 0 auto;
-  color: #dadada;
+  color: var(--item-text);
   font-family: 'Poppins', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -893,7 +972,7 @@ header .scroll-down a svg path {
 
 .item .desc .desc-desc {
   line-height: 30px;
-  color: #999999;
+  color: var(--item-descvar);
   font-size: 16px;
 }
 
@@ -914,7 +993,7 @@ header .scroll-down a svg path {
   padding-top: 20vh;
   min-height: 90vh;
   width: 100%;
-  background-color: #080808;
+  background-color: var(--cont-2-bg);
 }
 
 .c2 .cont-clip {
@@ -1065,7 +1144,7 @@ header .scroll-down a svg path {
   position: relative;
   min-height: 90vh;
   width: 100%;
-  background-color: #161616;
+  background-color: var(--cont-3-bg);
 }
 
 .c3 .cont-clip {
@@ -1110,7 +1189,7 @@ header .scroll-down a svg path {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: white;
+  color: var(--form-text);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -1125,15 +1204,15 @@ header .scroll-down a svg path {
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
   padding: 10px;
-  border: 1px solid #c9c9c9;
+  border: 1px solid var(--form-textareas);
   border-radius: 10px;
   background: transparent;
-  color: #c9c9c9;
+  color: var(--form-textareas);
 }
 
 .c3 .cont-clip .cont-center form .textarea-1 {
-  border: 1px solid #c9c9c9;
-  color: #c9c9c9;
+  border: 1px solid var(--form-textareas);
+  color: var(--form-textareas);
   background: transparent;
   margin-bottom: 30px;
   border-radius: 10px;
@@ -1149,7 +1228,7 @@ header .scroll-down a svg path {
   font-size: 16px;
   font-weight: 300;
   background: #d32f2f;
-  color: #ffffff;
+  color: white;
   border: none;
   -webkit-transition: color .2s ease, background .2s ease, border .2s ease;
   transition: color .2s ease, background .2s ease, border .2s ease;
@@ -1159,20 +1238,20 @@ header .scroll-down a svg path {
 }
 
 .c3 .cont-clip .cont-center form .submit-1:hover {
-  background: #c9c9c9;
-  color: black;
+  background: var(--form-textareas);
+  color: var(--submit-button-text);
 }
 
 .c3 .cont-clip .cont-center form .submit-1:active {
-  color: #d32f2f;
-  background: white;
+  color: white;
+  background: var(--form-text);
 }
 
 .c4 {
   position: relative;
   min-height: 70vh;
   width: 100%;
-  background-color: #080808;
+  background-color: var(--cont-2-bg);
   padding: 10vh 0;
 }
 
@@ -1202,7 +1281,7 @@ header .scroll-down a svg path {
           align-items: center;
   padding: 15vh 15%;
   padding-bottom: 5vh;
-  color: #9b9b9b;
+  color: var(--faq-color);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -1224,12 +1303,12 @@ header .scroll-down a svg path {
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   margin-bottom: 40px;
-  background: #080808;
+  background: var(--faq-item-bg);
 }
 
 .faq-card:hover .faq-card-header, .faq-card:hover .faq-card-header-more {
-  color: white;
-  fill: white;
+  color: var(--faq-color-hover);
+  fill: var(--faq-color-hover);
 }
 
 @media screen and (max-width: 430px) {
@@ -1274,7 +1353,7 @@ header .scroll-down a svg path {
 }
 
 .faq-card-header-more {
-  fill: #9b9b9b;
+  fill: var(--faq-color);
   -webkit-transition: fill .2s ease, -webkit-transform .2s ease;
   transition: fill .2s ease, -webkit-transform .2s ease;
   transition: transform .2s ease, fill .2s ease;
@@ -1335,16 +1414,16 @@ header .scroll-down a svg path {
 
 .faq-card-body ul.faq-diaries-list li a {
   display: block;
-  color: #e2e2e2;
+  color: var(--faq-list);
   word-break: break-all;
 }
 
 .faq-card .active {
-  color: white;
+  color: var(--faq-color-hover);
 }
 
 .faq-card .active .faq-card-header-more {
-  fill: white;
+  fill: var(--faq-color-hover);
 }
 
 .faq-card .active .faq-card-header-more svg {
@@ -1353,10 +1432,9 @@ header .scroll-down a svg path {
 }
 
 footer {
-  background: #080808;
+  background: var(--cont-2-bg);
   padding: 5vh 10%;
   padding-bottom: 3vh;
-  color: white;
   font-family: 'Poppins', sans-serif;
   font-size: 14px;
 }
@@ -1410,14 +1488,14 @@ footer .footer__links--cont a {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  color: #919191;
+  color: var(--footer-texts);
   -webkit-transition: color .2s ease;
   transition: color .2s ease;
 }
 
 footer .footer__links--cont a:hover .icon, footer .footer__links--cont a:hover {
-  color: white;
-  fill: white;
+  color: var(--footer-texts-hover);
+  fill: var(--footer-texts-hover);
 }
 
 @media screen and (max-width: 430px) {
@@ -1431,7 +1509,7 @@ footer .footer__links--cont a:hover .icon, footer .footer__links--cont a:hover {
 
 footer .footer__links--cont .icon {
   width: 50px;
-  fill: #919191;
+  fill: var(--footer-texts);
   margin-right: 10px;
   -webkit-transition: color .2s ease, fill .2s ease;
   transition: color .2s ease, fill .2s ease;
@@ -1498,7 +1576,7 @@ footer .footer__copyrights--cont--left {
 }
 
 footer .footer__copyrights--cont--left .copyright {
-  color: #525252;
+  color: var(--footer-copyrights-author);
 }
 
 footer .footer__copyrights--cont--left .copyright .spacer {
@@ -1513,7 +1591,7 @@ footer .footer__copyrights--cont--left .copyright .spacer {
 }
 
 footer .footer__copyrights--cont--left .privacy-policy a {
-  color: #6d6d6d;
+  color: var(--footer-privacy);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -1526,13 +1604,13 @@ footer .footer__copyrights--cont--right {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  color: #525252;
+  color: var(--footer-copyrights-author);
   text-align: right;
 }
 
 footer .footer__copyrights--cont--right a {
   text-decoration: none;
-  color: #525252;
+  color: var(--footer-copyrights-author);
   font-weight: 600;
   text-align: right;
 }
@@ -1548,7 +1626,7 @@ footer .footer__copyrights--cont--right .empty {
 }
 
 .faq-dec {
-  background: #161616 !important;
+  background: var(--faq-dec-bg) !important;
   position: relative;
   z-index: 1;
 }
@@ -1604,7 +1682,7 @@ footer .footer__copyrights--cont--right .empty {
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
   background-color: #d32f2f;
-  color: white;
+  color: var(--texts-buttons);
   cursor: pointer;
   -webkit-transition: background 0.25s ease-in-out;
   transition: background 0.25s ease-in-out;
