@@ -63,3 +63,47 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// $(".burger").click(function () {
+//   if ($(".nav-links").css("display") == "none") {
+//       $(".burger").css("transform", "rotate(180deg)");
+//       $(".nav-links").css("display", "flex");
+//   }
+//   else {
+//       $(".nav-links").removeAttr('style');
+//       $(".burger").css("transform", "rotate(0deg)");
+//   }
+// });
+// $(".nav-links li a").click(function () {
+//   if ($(".nav-links").css("display") == "flex") {
+//       $(".nav-links").removeAttr('style');
+//       $(".burger").css("transform", "rotate(0deg)");
+//   }
+// });
+
+
+$(".burger").click(function () {
+  if ($(".nav-links").css("display") == "none") {
+      $(".burger").css("transform", "rotate(180deg)");
+      $(".nav-links").css("display", "flex");
+      setTimeout(function() {
+          $(".nav-links").css({"display": "flex","transform": "translateX(0)"});
+      }, 10)
+  }
+  else {
+      $(".nav-links").css({"display": "flex","transform": "translateX(110%)"});
+      setTimeout(function (){
+          $(".nav-links").removeAttr('style');
+      }, 450)
+      $(".burger").css("transform", "rotate(0deg)");
+  }
+});
+$(".nav-links li a").click(function () {
+  if ($(".nav-links").css("display") == "flex" && $(".burger").css("display") == "block") {
+      $(".nav-links").css({"display": "flex","transform": "translateX(110%)"});
+      $(".burger").css("transform", "rotate(0deg)");
+      setTimeout(function (){
+          $(".nav-links").removeAttr('style');
+      }, 450)
+  }
+});
