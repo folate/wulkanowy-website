@@ -45,6 +45,7 @@ body {
   --submit-button-text: #ffffff;
   --header-bg: url("bg2.jpg");
   --header-dim: linear-gradient(180deg, rgba(0, 0, 0, 0.425) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.69) 100%);
+  --nav-links-mobile: #000000;
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -74,6 +75,7 @@ body {
     --submit-button-text: #000000;
     --header-bg: url("bg.jpg");
     --header-dim: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.69) 100%);
+    --nav-links-mobile: #ffffff;
   }
 }
 
@@ -187,7 +189,7 @@ body {
   }
   .navbar nav .nav-links > li a {
     margin: 5% 0;
-    color: black;
+    color: var(--nav-links-mobile);
   }
 }
 @media screen and (max-width: 430px) {

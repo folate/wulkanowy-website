@@ -84,7 +84,7 @@ for (i = 0; i < coll.length; i++) {
 
 $(".burger").click(function () {
   if ($(".nav-links").css("display") == "none") {
-      $(".burger").css({"transform": "rotate(180deg)", "fill": "black"});
+      $(".burger").css({"transform": "rotate(180deg)", "fill": "var(--nav-links-mobile)"});
       $(".nav-links").css("display", "flex");
       setTimeout(function() {
           $(".nav-links").css({"display": "flex","transform": "translateX(0)"});
