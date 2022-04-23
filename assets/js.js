@@ -84,7 +84,7 @@ for (i = 0; i < coll.length; i++) {
 
 $(".burger").click(function () {
   if ($(".nav-links").css("display") == "none") {
-      $(".burger").css("transform", "rotate(180deg)");
+      $(".burger").css({"transform": "rotate(180deg)", "fill": "black"});
       $(".nav-links").css("display", "flex");
       setTimeout(function() {
           $(".nav-links").css({"display": "flex","transform": "translateX(0)"});
@@ -95,13 +95,13 @@ $(".burger").click(function () {
       setTimeout(function (){
           $(".nav-links").removeAttr('style');
       }, 450)
-      $(".burger").css("transform", "rotate(0deg)");
+      $(".burger").removeAttr('style');
   }
 });
 $(".nav-links li a").click(function () {
   if ($(".nav-links").css("display") == "flex" && $(".burger").css("display") == "block") {
       $(".nav-links").css({"display": "flex","transform": "translateX(110%)"});
-      $(".burger").css("transform", "rotate(0deg)");
+      $(".burger").removeAttr('style');
       setTimeout(function (){
           $(".nav-links").removeAttr('style');
       }, 450)

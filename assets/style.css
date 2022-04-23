@@ -18,6 +18,34 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  --navbar-texts: #000000;
+  --navbar-bg: rgb(235, 235, 235);
+  --navbar-border-botm: rgba(77, 77, 77, 0.2);
+  --navbar-logo: #000000;
+  --section-title: rgb(37, 37, 37);
+  --item-text: rgb(37, 37, 37);
+  --item-desc: rgb(105, 105, 105);
+  --form-text: #000000;
+  --form-textareas: rgb(54, 54, 54);
+  --faq-color: rgb(71, 71, 71);
+  --faq-color-hover: #000000;
+  --faq-list: rgb(20, 20, 20);
+  --footer-texts: rgb(105, 105, 105);
+  --footer-texts-hover: #000000;
+  --footer-copyrights-author: #b9b9b9;
+  --footer-privacy: #9e9e9e;
+  --texts-buttons: #000000;
+  --header-wave-last: #ffffff;
+  --cont-1-bg: #ffffff;
+  --cont-2-bg: #e6e6e6;
+  --cont-3-bg: #ffffff;
+  --faq-item-bg: #f1f1f1;
+  --faq-dec-bg: #ffffff;
+  --submit-button-text: #ffffff;
+  --header-bg: url("bg2.jpg");
+  --header-dim: linear-gradient(180deg, rgba(0, 0, 0, 0.425) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.69) 100%);
+}
 @media (prefers-color-scheme: dark) {
   body {
     --navbar-texts: #ffffff;
@@ -44,34 +72,8 @@ html {
     --faq-item-bg: #080808;
     --faq-dec-bg: #161616;
     --submit-button-text: #000000;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body {
-    --navbar-texts: #000000;
-    --navbar-bg: rgb(235, 235, 235);
-    --navbar-border-botm: rgba(77, 77, 77, 0.2);
-    --navbar-logo: #000000;
-    --section-title: rgb(37, 37, 37);
-    --item-text: rgb(37, 37, 37);
-    --item-desc: rgb(105, 105, 105);
-    --form-text: #000000;
-    --form-textareas: rgb(54, 54, 54);
-    --faq-color: rgb(71, 71, 71);
-    --faq-color-hover: #000000;
-    --faq-list: rgb(20, 20, 20);
-    --footer-texts: rgb(105, 105, 105);
-    --footer-texts-hover: #000000;
-    --footer-copyrights-author: #b9b9b9;
-    --footer-privacy: #9e9e9e;
-    --texts-buttons: #000000;
-    --header-wave-last: #ffffff;
-    --cont-1-bg: #ffffff;
-    --cont-2-bg: #e6e6e6;
-    --cont-3-bg: #ffffff;
-    --faq-item-bg: #f1f1f1;
-    --faq-dec-bg: #ffffff;
-    --submit-button-text: #ffffff;
+    --header-bg: url("bg.jpg");
+    --header-dim: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.69) 100%);
   }
 }
 
@@ -185,6 +187,7 @@ html {
   }
   .navbar nav .nav-links > li a {
     margin: 5% 0;
+    color: black;
   }
 }
 @media screen and (max-width: 430px) {
@@ -213,7 +216,8 @@ html {
   display: none;
   color: white;
   cursor: pointer;
-  transition: transform 0.35s ease;
+  transform: rotate(0);
+  transition: transform 0.35s ease, fill 0.35s ease;
 }
 @media screen and (max-width: 900px) {
   .navbar nav .burger {
@@ -269,7 +273,7 @@ html {
 }
 
 header {
-  background-image: url("bg.jpg");
+  background-image: var(--header-bg);
   background-size: cover;
   background-position: center;
 }
@@ -298,7 +302,7 @@ header::after {
   }
 }
 header .hero-cont {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.69) 100%);
+  background: var(--header-dim);
   width: 100%;
   height: 100vh;
   display: flex;
